@@ -76,3 +76,35 @@ Once the installation is complete, you can run the scraper script from the proje
 
 ```bash
 python main.py
+```
+
+The script will then:
+1.  Fetch the webpage containing the Pokémon list.
+2.  Parse the HTML to extract data for each Pokémon.
+3.  Print a confirmation message to the console upon completion.
+4.  Generate a `pokemon_data.csv` file in the same directory with the scraped data.
+
+## 📊 Output
+
+The script generates a CSV file named `pokemon_data.csv` with the following columns:
+
+-   `#`: National Pokédex number.
+-   `Name`: Name of the Pokémon.
+-   `Type 1`: Primary type of the Pokémon.
+-   `Type 2`: Secondary type of the Pokémon (can be empty if the Pokémon has only one type).
+-   `Total`: Sum of all base stats.
+-   `HP`: Hit Points.
+-   `Attack`: Attack stat.
+-   `Defense`: Defense stat.
+-   `Sp. Atk`: Special Attack stat.
+-   `Sp. Def`: Special Defense stat.
+-   `Speed`: Speed stat.
+
+Example `pokemon_data.csv` structure:
+
+```csv
+#,Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
+001,Bulbasaur,Grass,Poison,318,45,49,49,65,65,45
+002,Ivysaur,Grass,Poison,405,60,62,63,80,80,60
+...
+```
